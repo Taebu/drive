@@ -1,14 +1,218 @@
+<?php
+function is_mobile()
+{
+	$mobile_agent = array("iphone","ipod","android","blackberry","opera Mini", "windows ce", "nokia", "sony" );
+	$check_mobile = false;
+	for($i=0; $i<sizeof($mobile_agent); $i++)
+	{ 
+		if(preg_match("/$mobile_agent[$i]/", strtolower($_SERVER['HTTP_USER_AGENT']))){ 
+		$check_mobile = true;
+		break; 
+		} 
+	}
+	return $check_mobile;
+}
+
+if(is_mobile())
+{
+	header("Location:http://www.cashq.co.kr/m/drtalk.php");	
+}
+?>
 <!doctype html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <title>Document</title>
- </head>
- <body>
-  <h1>It's works!!!</h1>
- </body>
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>톡톡대리운전</title>
+
+
+</head>
+<style>
+	ul{
+	margin:0px; padding:0px; list-style:none;
+	}
+	
+	.top{
+		font-size:34px;
+		background:#000;
+		color:#fff;
+		width:100%;
+		padding-top:10px;
+		}
+	.bottom{
+		font-size:13px;
+		background:#000;
+		color:#fff;
+		width:100%;
+		padding-top:20px;
+		padding-bottom:20px;
+		}
+	a{
+	text-decoration:none;
+	}
+</style>
+<body leftmargin=0 topmargin=0>
+	<div class="top">
+		<ul style="width:1070px;margin:0 auto;">
+			<li id="top" style="float:left;width:48%;">
+				 톡톡대리운전 <span style="font-weight:bold;color:#ffff00;">1877-1140</span>
+			</li>
+			<li style="float:right;width:35%;font-size:13px;margin-top:12px;border:0px solid red;">
+				<ul>
+					<li style="float:left;font-size:19px;">
+						<a href="#company" style="text-decoration:none;color:#fff;">회사소개</a>
+					</li>
+					<li style="float:left;margin:5px 25px 0 25px;color:#c2c2c2;">|</li>
+					<li style="float:left;font-size:19px;">
+						<a href="#service" style="text-decoration:none;color:#fff;">서비스안내</a>
+					</li>
+					<li style="float:left;margin:5px 25px 0 25px;color:#c2c2c2;">|</li>
+					<li style="float:left;font-size:19px;">
+						<a href="#custmorcenter" style="text-decoration:none;color:#fff;">고객센터</a>
+					</li>
+					
+				</ul>
+			</li>
+			<li style="clear:both;"></li>
+		</ul>
+	</div>
+	<ul>
+		<li>
+			<img src="http://www.cashq.co.kr/images/drtalk/main1.png" width="100%">
+		</li>
+		<li style="width:100%;height:1100px;background-image:url(http://www.cashq.co.kr/images/new/about_background.png);background-size:100%;margin-top:-4px;background-repeat: no-repeat;">
+			<div style="width:1070px;margin:0 auto;">
+				<div style="text-align:center;padding-top:145px;">
+					<ul id="company">
+						<li style="font-weight:bold;font-size:75px;">ABOUT US</li>
+						<li style="margin-bottom:45px;">
+							<span style="font-size:21px;color:#848484;letter-spacing:-1.5px;">최고의 서비스와 안전을 보장하는 톡톡대리운전!</span>
+							
+							<div style="margin-top:45px;line-height:26px;font-size:">
+							최상의 서비스와 안전성을 기반으로 고객만족을 위해 끊임없이 노력하고 있습니다.<br>
+							저희 톡톡대리운전은 동종업계 대표주자 업체로써 전직원이 대리운전자 보험에 가입되어 있으며,<br>
+							체계적인 시스템으로 연중무휴 24시간 고객만족을 위해 최선을 다하고 있습니다. <br>
+							지금까지 끊임없이 성원해 주시고 아껴주신 고객님들께 감사드리며<br>
+							친절함은 물론 안전운행까지! 편안하게 댁까지 모실 수 있도록 
+							노력하는 톡톡대리운전이 되겠습니다. 
+							<p></p>
+							감사합니다.
+							</div>
+						</li>
+						<li style="width:100%;margin-bottom:25px;">
+							<img src="http://www.cashq.co.kr/images/new/about_text.png" width="50%">
+						</li>
+						<li style="text-align:center;background:#2d2d2d;color:#fff;font-weight:bold;font-size:103px;width:525px;margin:0 auto;height:80px;line-height:68px;">
+							1877-1140
+						</li>
+						<!-- <li style="width:100%;margin-top:105px;">
+							<img src="http://www.cashq.co.kr/images/new/about_bottom.png" width="100%">
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</li>
+		<li style="clear:both;"></li>
+		<li style="text-align:center;background:#eec6c3;">
+			<img src="http://www.cashq.co.kr/m/img/new/pointbn.png">
+		</li>
+		<li style="clear:both;"></li>
+		<li id="service" style="background:#454545;padding-top:55px;text-align:center;margin-top:-4px;">
+			<div style="width:1070px;margin:0 auto;">
+				<ul>
+					<li style="font-weight:bold;font-size:75px;color:#fff;">SERVICE</li>
+					<li style="margin-bottom:45px;">
+						<div style="background:#c3c3c3;width:380px;margin:0 auto;padding:2px;">
+							<span style="font-size:19px;color:#454545;letter-spacing:-1.5px;">최고의 서비스와 안전을 보장하는 톡톡대리운전!</span>
+						</div>
+						<div style="width:100%;text-align:center;margin-top:35px;">
+							<img src="http://www.cashq.co.kr/images/new/service.png" width="72%;">
+						</div>
+						
+					</li>
+					<li style="clear:both;height:85px;"></li>
+				</ul>
+			</div>
+		</li>
+		<li style="clear:both;"></li>
+		<li id="custmorcenter" style="text-align:center;margin-top:-4px;">
+			<img src="http://www.cashq.co.kr/images/new/custmorcenter.png" width="100%">
+		</li>
+	</ul>
+	<div style="clear:both;"></div>
+	
+	<div class="bottom" style="margin-top:-4px;">
+		<ul style="width:1070px;margin:0 auto;">
+			<li style="float:left;width:50%;">
+				<ul style="line-height:18px;border:0px solid red;margin-top:10px;">
+					<li>에이엔피알　　CEO 김옥란　　사업자등록번호 476-11-00222</li>
+					<li>Tel. 1599-9495　　Fax. 050-5300-9495</li>
+					<li>Address 서울 강서구 마곡서로 175, 404동 804호</li>
+					<li>E-mail. anprq@naver.com</li>
+					<li>Copyright(c) by　ANPR　Corp. All rights reserved.</li>
+				</ul>
+			</li>
+			<li style="float:right;font-size:39px;text-align:right;width:22%;">
+				<div style="font-size:21px;">톡톡대리운전</div>
+				<b>1877-1140</b><br>
+				<div style="width:100%;font-size:11px;text-align:center;line-height:18px;">
+					<ul>
+						<li style="float:left;width:43%;background:#454545;border-radius:15px;padding:2px;">
+							<a href="/provision.php" onclick="window.open(this.href, '서비스이용약관', 'width=500,height=600'); return false;" style="color:#bbb;">서비스이용약관</a>
+						</li>
+						<li style="float:right;width:43%;background:#454545;border-radius:15px;padding:2px;">
+							<a href="/personalinfo.php" onclick="window.open(this.href, '개인정보취급방침', 'width=500,height=600'); return false;" style="color:#bbb;">개인정보취급방침</a>
+						</li>
+						<li style="clear:both;"></li>
+					</ul>
+				</div>
+			</li>
+			<li style="clear:both;"></li>
+		</ul>
+	</div>
+
+	<div style="clear:both;"></div>
+
+	<div style="position:fixed;bottom:0px;right:0px;height:100%;background-color: rgba( 255, 255, 255, 0.5 );">
+		<ul style="text-align:center;">
+			<li style="font-size:35px;font-weight:bold;width:125px">
+				<img src="http://www.cashq.co.kr/images/new/quick.png" width="100%">
+			</li>
+			<li style="margin-top:30px;font-size:14px">
+				<ul>
+					<li>
+						<a href="#company" class="scroll" style="color:#000;text-decoration:none;">
+							<img src="http://www.cashq.co.kr/images/new/bt_3.png" width="65px;" onmouseover="this.src='http://www.cashq.co.kr/images/new/bt_3_over.png'" onmouseout="this.src='http://www.cashq.co.kr/images/new/bt_3.png'" title="회사소개" alt="회사소개">
+							<div style="margin-top:-3px;letter-spacing:-1.5px;font-weight:bold;">회사소개</div>
+						</a>
+					</li>
+					<li style="margin-top:32px;">
+						<a href="#service" class="scroll" style="color:#000;text-decoration:none;">
+							<img src="http://www.cashq.co.kr/images/new/bt_2.png" width="65px;" onmouseover="this.src='http://www.cashq.co.kr/images/new/bt_2_over.png'" onmouseout="this.src='http://www.cashq.co.kr/images/new/bt_2.png'" title="서비스 안내" alt="서비스 안내">
+							<div style="margin-top:-3px;letter-spacing:-1.5px;font-weight:bold;">서비스 안내</div>
+						</a>
+					</li>
+					<li style="margin-top:32px;">
+						<a href="#custmorcenter" class="scroll" style="color:#000;text-decoration:none;">
+							<img src="http://www.cashq.co.kr/images/new/bt_4.png" width="65px;" onmouseover="this.src='http://www.cashq.co.kr/images/new/bt_4_over.png'" onmouseout="this.src='http://www.cashq.co.kr/images/new/bt_4.png'" title="공지사항" alt="공지사항">
+							<div style="margin-top:-3px;letter-spacing:-1.5px;font-weight:bold;">고객센터</div>
+						</a>
+					</li>
+					<li style="margin-top:32px;">
+						<a href="#top" class="scroll" style="color:#000;text-decoration:none;">
+							<img src="http://www.cashq.co.kr/images/new/bt_1.png" width="65px;" onmouseover="this.src='http://www.cashq.co.kr/images/new/bt_1_over.png'" onmouseout="this.src='http://www.cashq.co.kr/images/new/bt_1.png'" title="처음으로" alt="처음으로">
+							<div style="margin-top:-3px;letter-spacing:-1.5px;font-weight:bold;">처음으로</div>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
 </html>
+
+
+
