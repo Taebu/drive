@@ -6,7 +6,7 @@
 */
 include $_SERVER["DOCUMENT_ROOT"]."/lib/PHPExcel-1.8/Classes/PHPExcel.php";
 include_once $_SERVER["DOCUMENT_ROOT"]."/common.php";
-
+$duplicate_count=$point_count=$fail_count=0;
 $UpFile	= $_FILES["upfile"];
 $UpFileName = $UpFile["name"];
 
@@ -125,16 +125,17 @@ if(is_uploaded_file($UpFile["tmp_name"])) {
 	$sql=array();
 	$keys=join(",",$key_code);
 	$sql[]="select po_odno from drive_point ";
-	$sql[]="where po_odno not in ({$keys});";
+	$sql[]="where po_odno in ({$keys});";
 	echo join("",$sql);
 	$query=mysql_query(join("",$sql));
 /*
 	while($list=mysql_fetch_assoc($query))
 	{
-		echo $list['po_odno'];
+		
+$ $list['po_odno'];
 	}
 	*/
-/*
+
 	foreach($key_code as $k)
 	{
 		echo $k;
@@ -143,6 +144,7 @@ if(is_uploaded_file($UpFile["tmp_name"])) {
 
 	foreach($sheetData2 as $rows) 
 	{
+		
 			$key_code[]=$rows["B"];
 			$sql=array();
 			$date = str_replace("/", "-",$rows["J"]);
